@@ -14,7 +14,7 @@ typedef int ElemType;   // 定义 int 型的别名 ElemType
 typedef struct{
 	ElemType data[MaxSize];  // 数据元素
 	int length;              // 顺序表表长
-}SqList;                     // 顺序表类型定义
+}SqList;                         // 顺序表类型定义
 
 // 初始化
 void InitList(SqList &L)
@@ -43,7 +43,7 @@ bool ListDelete(SqList &L, int i, ElemType &x)
 		return false;
 	x = L.data[i - 1];                 // 返回被删除的元素
 	for(int j = i; j < L.length; j++)
-		L.data[j - 1] = L.data[j];     // 将 L.data[i : L.length - 1] 前移
+		L.data[j - 1] = L.data[j]; // 将 L.data[i : L.length - 1] 前移
 	L.length--;                        // 修改顺序表表长
 	return true;
 }
