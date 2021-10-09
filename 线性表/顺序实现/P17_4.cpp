@@ -8,16 +8,20 @@ bool Del_s_t(SqList& L, int s, int t)
     if(s >= t)
         return false;
     
-    
-    // 双指针法
-    int slow = fast = 0;
-    while(fast < L.length)
-    {
-        if(L.data[fast] < s || L.data[fast] > t)
-            L.data[slow++] = L.data[fast];
-        fast++;
-    }
+    // 找到要删除的连续元素序列
+    int start = end = 0;
+    while(L.data[start] < s)
+        start++;
+    end = start;
+    while(L.data[end] < t)
+        end++;
+
+    // 覆盖被删除的元素
+    int i = start, j = end;
+    while(i < end && j < L.length)
+        L.data[i++] = L.data[j++]
     
     // 更新顺序表长度
-    L.length = slow + 1;
+    L.length = L.length - (end - start);
+    return true;
 }
