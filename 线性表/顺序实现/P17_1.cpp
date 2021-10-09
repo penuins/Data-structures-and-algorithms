@@ -17,3 +17,4 @@ bool Del_Min(SqList& L)
 	L.data[index] = L.data[L.length - 1];
 	L.length--;
 }
+
