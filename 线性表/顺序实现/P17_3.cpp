@@ -17,3 +17,4 @@ void Del_x(SqList& L, ElemType x)
     // 更新顺序表表长
     L.length = slow + 1;
 }
+
