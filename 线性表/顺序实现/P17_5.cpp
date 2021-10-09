@@ -19,4 +19,5 @@ bool Del_s_t(SqList& L, int s, int t)
     
     // 更新顺序表长度
     L.length = slow + 1;
+    return true;
 }
