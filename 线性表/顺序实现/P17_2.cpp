@@ -26,3 +26,5 @@ void Reverse(SqList& L, int left, int right)
     while(left < right)
         swap(L.data[left], L.right[right]);
 }
+
+
