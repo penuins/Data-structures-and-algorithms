@@ -25,3 +25,6 @@ bool Del_s_t(SqList& L, int s, int t)
     L.length = L.length - (end - start);
     return true;
 }
+
+
+
