@@ -10,10 +10,10 @@ bool Del_s_t(SqList& L, int s, int t)
     
     // 找到要删除的连续元素序列
     int start = end = 0;
-    while(L.data[start] < s)
+    while(L.data[start] < s && start < L.length)
         start++;
     end = start;
-    while(L.data[end] < t)
+    while(L.data[end] < t && end < L.length)
         end++;
 
     // 覆盖被删除的元素
