@@ -16,5 +16,6 @@ bool Del_Min(SqList& L)
 	// 用末尾元素覆盖最小元素，并将顺序表长度减1
 	L.data[index] = L.data[L.length - 1];
 	L.length--;
+	return true;
 }
 
