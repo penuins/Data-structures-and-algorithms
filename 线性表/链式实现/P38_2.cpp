@@ -4,13 +4,16 @@
 
 void Del_All_x(LinkList& L, ElemType x)
 {
+    //       p  q
+    //       |  |
+    // [...][ ][x][...]
+    
     LNode* p = L, q = L->next;
     while(q != NULL)
     {
         if(q->data == x)    // 删除结点q
         {
             p->next = q->next;
-            q->next = NULL;
             free(q);
             q = p->next;
         }
@@ -21,5 +24,7 @@ void Del_All_x(LinkList& L, ElemType x)
         }
     }
 }
+
+
 
 
