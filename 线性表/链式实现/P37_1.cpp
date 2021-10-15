@@ -7,11 +7,10 @@ void Del_x(LinkList& L, ElemType x)
     if(L == NULL)      // 边界条件
         return;
     
-    if(L.data == x)    // 当前元素等于x
+    if(L->data == x)   // 当前元素等于x
     {
         LNode* p = L;
         L=L->next;
-        p->next = NULL;
         free(p);
         Del_x(L, x);
     }
